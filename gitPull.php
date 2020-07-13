@@ -1,3 +1,3 @@
 <?php
-echo shell_exec(getcwd().'/gitPull.sh');
+echo shell_exec(getcwd().'/gitPull.sh 2>&1');
 

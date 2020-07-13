@@ -1,0 +1,1 @@
+[13-Jul-2020 22:19:04 UTC] PHP Parse error:  syntax error, unexpected '"$(ssh-agent)"' (T_CONSTANT_ENCAPSED_STRING), expecting '(' in /home/minute4soul/public_html/gitPull.php on line 2
