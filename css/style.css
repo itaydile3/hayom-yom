@@ -10,6 +10,7 @@
   font-style: normal;
   src: url('https://s3-eu-west-1.amazonaws.com/fonts-project/fonts/OzradCLM/700.woff') format('woff');
 }
+
 body {
   background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%) !important;
 }
