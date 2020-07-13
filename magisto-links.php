@@ -8,7 +8,7 @@
   <title>Document</title>
 </head>
 <body>
-hello puchas
+hello puchas 2
 0: {title: "ההצלחה מחייבת שינה בזמן.", date: "06/09/19", linkvid: "https://result.cdn.magisto.com/5/f/NlgYKghWAm89ARFgCzE_/high.mp4"}
 1: {title: "הסוד מאיר.", date: "05/09/19", linkvid: "https://result2.cdn.magisto.com/7/5/Ol8TJkAFEDozBx5pYw_/high.mp4"}
 2: {title: "בתפילה אני מי שאני.", date: "04/09/19", linkvid: "https://result.cdn.magisto.com/d/1/aQZDYQUFRzEhD0NgCzE_/high.mp4"}
