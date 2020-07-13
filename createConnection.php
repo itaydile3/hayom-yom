@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$database = "hayom";
+$username = "minute4soul";
+$password = "jghj3455FHG765Fjh576567@jlkjkljkl";
+$database = "minute4soul";
 
 header('Content-Type: text/html; charset=utf-8');
 

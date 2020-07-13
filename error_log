@@ -1,1 +1,9 @@
 [13-Jul-2020 22:19:04 UTC] PHP Parse error:  syntax error, unexpected '"$(ssh-agent)"' (T_CONSTANT_ENCAPSED_STRING), expecting '(' in /home/minute4soul/public_html/gitPull.php on line 2
+[13-Jul-2020 22:45:52 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/minute4soul/public_html/createConnection.php on line 10
+[13-Jul-2020 22:45:52 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/minute4soul/public_html/createConnection.php on line 11
+[13-Jul-2020 22:45:57 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/minute4soul/public_html/createConnection.php on line 10
+[13-Jul-2020 22:45:57 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/minute4soul/public_html/createConnection.php on line 11
+[13-Jul-2020 22:51:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/minute4soul/public_html/createConnection.php on line 10
+[13-Jul-2020 22:51:50 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/minute4soul/public_html/createConnection.php on line 11
+[13-Jul-2020 22:51:56 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/minute4soul/public_html/createConnection.php on line 10
+[13-Jul-2020 22:51:56 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/minute4soul/public_html/createConnection.php on line 11
