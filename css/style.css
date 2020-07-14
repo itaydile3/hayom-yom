@@ -244,3 +244,9 @@ body {
     right: -5%;
   }
 }
+
+@media (min-width: 801px) and (max-width: 950px) {
+  #videoModal .modal-dialog .modal-content {
+    height: 507px;
+  }
+}
