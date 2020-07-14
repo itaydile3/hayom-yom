@@ -51,8 +51,7 @@ body {
 #videoModal .modal-dialog .modal-body .videoWrapper{
   width: 90%;
   height: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 #videoModal .modal-header{
