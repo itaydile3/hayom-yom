@@ -38,7 +38,7 @@ body {
 }
 
 #videoModal .modal-dialog .modal-content{
-  height: 90vh;
+  /*height: 90vh;*/
 }
 
 #videoModal .modal-dialog .modal-body{
@@ -50,6 +50,7 @@ body {
 }
 #videoModal .modal-dialog .modal-body .videoWrapper{
   width: 90%;
+  height: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -204,7 +205,7 @@ body {
     height: 317px;
   }
   #videoModal .modal-dialog .modal-content{
-    height: 507px;
+    /*height: 507px;*/
   }
   #videoModal .modal-dialog{
     align-items: baseline;
@@ -242,11 +243,5 @@ body {
   }
   #videoModal button.slick-arrow.slick-next{
     right: -5%;
-  }
-}
-
-@media (min-width: 801px) and (max-width: 950px) {
-  #videoModal .modal-dialog .modal-content {
-    height: 507px;
   }
 }
