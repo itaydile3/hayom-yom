@@ -11,8 +11,12 @@
   src: url('https://s3-eu-west-1.amazonaws.com/fonts-project/fonts/OzradCLM/700.woff') format('woff');
 }
 
+html{
+  height: 100%;
+}
 body {
-  background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%) !important;
+  background-image: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%) !important;
+  height: 100%;
 }
 #videoModal .modal-dialog{
   width: 90%;
@@ -245,4 +249,20 @@ body {
   #videoModal button.slick-arrow.slick-next{
     right: -5%;
   }
+}
+
+/*missing dates*/
+.generate-missing{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.select-dates{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  direction: rtl;
+  text-align: right;
+  justify-content: space-around;
+  margin: auto;
 }

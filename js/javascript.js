@@ -1,13 +1,15 @@
 var $ = jQuery;
 $(document).ready(function () {
   // fix height
-  let windowHeight = window.innerHeight;
-  let bodyHeight = $('body').outerHeight();
-  if (bodyHeight < windowHeight){
-    $('body, html').css('height', windowHeight + 'px');
+  if ($('body').data('page-id') === 'home'){
+    let windowHeight = window.innerHeight;
+    let bodyHeight = $('body').outerHeight();
+    if (bodyHeight < windowHeight){
+      $('body, html').css('height', windowHeight + 'px');
+    }
   }
 
-  var availableDates = []
+  var availableDates = [];
   let prevDay = '';
   let nextDay = ''
 
@@ -21,6 +23,33 @@ $(document).ready(function () {
     $.each( obj, function( key, value ) {
       availableDates.push(value);
     });
+
+    //get missing dates
+    if ($('body').data('page-id') === 'missing-dates'){
+      $('body').on('click', '#generate-missing-btn', function () {
+        let start_parts = $('#start').val().split('-');
+        let end_parts = $('#end').val().split('-');
+
+        let start_date = new Date(parseInt(start_parts[0]),parseInt(start_parts[1]) - 1,parseInt(start_parts[2]) - 1);
+        let end_date = new Date(parseInt(end_parts[0]),parseInt(end_parts[1]) - 1,parseInt(end_parts[2]) - 1);
+        let missingDates = [];
+
+        $('.missing-dates-container ul').html('');
+        do {
+          var tomorrow = start_date;
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          var MyDateString = tomorrow.getFullYear() + '-' + ('0' + (tomorrow.getMonth()+1)).slice(-2) + '-' + ('0' + tomorrow.getDate()).slice(-2);
+          if (!availableDates.includes(MyDateString)){
+            if (!missingDates.includes(MyDateString)){
+              $('.missing-dates-container ul').append('<li>'+MyDateString+'</li>');
+              missingDates.push(MyDateString)
+            }
+          }
+        }
+        while (tomorrow < end_date);
+      });
+
+    }
 
     let datesLen = availableDates.length;
     let defaultDateRaw = availableDates[datesLen - 1].split('-');
@@ -197,6 +226,10 @@ $(document).ready(function () {
     if (day.length < 2) day = '0' + day;
 
     return `${year}-${month}-${day}`;
+  }
+
+  function isInArray(array, value) {
+    return !!array.find(item => {return item.getTime() === value.getTime()});
   }
 
   // $('body').on('click', '#fetch', function () {
