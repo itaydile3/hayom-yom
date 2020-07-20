@@ -82,6 +82,7 @@ $(document).ready(function () {
             $('.videoWrapper').slick('unslick');
             $('#videoModal iframe:not(:first)').remove();
             $('.modal-title:not(:first)').remove();
+            $('.modal-header .modal-title').show();
           }
 
           var vidobj = $.parseJSON( vidata );
@@ -168,12 +169,16 @@ $(document).ready(function () {
     });
 
     $('.videoWrapper').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      $('.modal-header .modal-title').eq(currentSlide).hide();
-      $('.modal-header .modal-title').eq(nextSlide).fadeIn();
+      if ($('.modal-header .modal-title').length > 1) {
+        $('.modal-header .modal-title').eq(currentSlide).hide();
+        $('.modal-header .modal-title').eq(nextSlide).fadeIn();
+      }
     });
     $(".videoWrapper").on('afterChange', function(event, slick, currentSlide, nextSlide){
-      $('.modal-header .modal-title').hide();
-      $('.modal-header .modal-title').eq(currentSlide).show();
+      if ($('.modal-header .modal-title').length > 1){
+        $('.modal-header .modal-title').hide();
+        $('.modal-header .modal-title').eq(currentSlide).show();
+      }
     });
 
   });
