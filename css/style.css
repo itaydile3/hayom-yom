@@ -253,6 +253,15 @@ body {
 }
 
 /*missing dates*/
+#generate-missing-btn{
+  background: #101010;
+  color: white;
+  padding: 5px 15px;
+}
+#generate-missing-btn:hover{
+  background: #1e5368;
+}
+
 .generate-missing{
   width: 50%;
   margin: auto;
@@ -264,6 +273,10 @@ body {
   flex-direction: row;
   direction: rtl;
   text-align: right;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin: auto;
+}
+
+.generate-missing label{
+  width: 112px;
 }

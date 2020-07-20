@@ -37,7 +37,7 @@
              min="2012-01-01" max="2020-12-31">
     </div>
   </div>
-  <button class="btn btn-light" id="generate-missing-btn">הצג</button>
+  <button class="btn" id="generate-missing-btn">הצג</button>
 
 </div>
 <div class="missing-dates-container">
