@@ -253,6 +253,9 @@ body {
 }
 
 /*missing dates*/
+.start-date-container{
+  margin-left: 20px;
+}
 #generate-missing-btn{
   background: #101010;
   color: white;
