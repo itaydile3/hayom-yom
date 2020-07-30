@@ -125,7 +125,8 @@ body {
   text-align: center;
   width: 55px;
   height: 11vh;
-  /*height: 101px;*/
+  border-right: 1px solid #bbb;
+  border-left: 1px solid #bbb;
 }
 
 #datepicker .ui-datepicker tbody td span{
@@ -198,6 +199,42 @@ body {
 }
 
 @media (max-width: 800px) {
+  /*jewish style*/
+  body.jewish-style #datepicker .ui-datepicker tbody td span{
+    transform: translateY(10px);
+    background: transparent;
+    margin-top: -42px;
+    height: 10vw !important;
+  }
+  body.jewish-style #datepicker .ui-datepicker tbody td,
+  body.jewish-style #datepicker .ui-datepicker tbody td span{
+    height: 10vw !important;
+  }
+
+  body.jewish-style #datepicker .c-day::after{
+    content: attr(title);
+    margin-right: 0;
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    right: 0;
+    font-size: 10px;
+  }
+  body.jewish-style #datepicker .ui-datepicker-calendar [data-handler="selectDay"] a{
+    color: #00638e;
+    box-shadow: none;
+    text-shadow: none;
+    transform: translateY(-12px);
+    border: 0 none;
+    background: transparent;
+    font-size: 16px;
+  }
+  body.jewish-style #datepicker .ui-datepicker-calendar [data-handler="selectDay"] a.ui-state-active{
+    color: red;
+  }
+  /*end jewish style*/
+
   html,
   body {
     height: 100%;
@@ -228,9 +265,20 @@ body {
     flex-wrap: wrap;
     padding-bottom: 20px;
   }
+
 }
 
 @media (max-width: 480px) {
+
+  body.jewish-style #datepicker .ui-datepicker tbody td,
+  body.jewish-style #datepicker .ui-datepicker tbody td span{
+    height: 17vw !important;
+  }
+  body.jewish-style #datepicker .c-day::after{
+    top: 31px;
+  }
+
+
   body #datepicker .ui-datepicker tbody td,
   body #datepicker .ui-datepicker tbody td span{
     height: 13vw !important;
@@ -282,4 +330,20 @@ body {
 
 .generate-missing label{
   width: 112px;
+}
+#datepicker  .c-day{
+  position: relative;
+}
+#datepicker  .c-day::after {
+  content: attr(title);
+  margin-right: 5px;
+  display: block;
+  position: absolute;
+  top: calc(50% + 19px);
+  left: 0;
+  right: 0;
+}
+
+#datepicker .ui-state-disabled{
+  background: #f4f4f4;
 }
