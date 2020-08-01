@@ -1,5 +1,31 @@
 var $ = jQuery;
 $(document).ready(function () {
+
+  //for all videos page
+  if ($('body').data('page-id') === 'all-videos'){
+
+    $('.gdate').each(function(index, el){
+      var string = $(el).text();
+      let DayParts = string.split('-');
+      let DayYear = parseInt(DayParts[0]);
+      let DayMonth = parseInt(DayParts[1]);
+      let DayD = parseInt(DayParts[2]);
+
+      var h_date = new Hebcal.HDate(new Date(DayYear, DayMonth, DayD));
+      let h_day = h_date.day;
+      let h_month = h_date.month - 1;
+      let h_year = h_date.year;
+      var h_string = new Hebcal.HDate(h_day,h_month,h_year).toString('h');
+      $(el).closest('tr').find('.hdate').text(h_string);
+    });
+
+  }
+
+
+
+
+
+
   // fix height
   if ($('body').data('page-id') === 'home'){
     let windowHeight = window.innerHeight;

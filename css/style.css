@@ -347,3 +347,21 @@ body {
 #datepicker .ui-state-disabled{
   background: #f4f4f4;
 }
+
+/*all videos page*/
+[data-page-id="all-videos"] table{
+  direction: rtl;
+  margin: auto;
+  width: 100%;
+  text-align: right;
+}
+
+[data-page-id="all-videos"] table thead{
+  background: #a80000;
+  color: white;
+}
+
+[data-page-id="all-videos"] table, [data-page-id="all-videos"] th, [data-page-id="all-videos"] td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
